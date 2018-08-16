@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.fora{
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.centro-centro{
+  justify-content: center;
+  position: absolute;
+  margin-top: 3px;
+}
+
+.centro{
+  width: 50%;
+  display: flex;
+  float: left;
+  position: absolute;
+  margin-top: 43px;
+}

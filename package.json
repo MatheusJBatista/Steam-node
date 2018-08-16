@@ -1,0 +1,21 @@
+{
+  "name": "steam",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "express-session": "^1.15.6",
+    "file-system": "^2.2.2",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "npm": "^6.3.0",
+    "pg": "^7.4.3",
+    "steam-login": "^0.1.7"
+  }
+}
