@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Battlebuff</title>
+  <link rel="stylesheet" href="/stylesheet/app.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="centro">
+      <a href="./login"><img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png" alt="Steam Login"></a>
+</div>
+      <div class="centro">
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="cool">Foto</td>
+              <th class="cool">Steam64</td>
+                <th class="cool">Nick</td>
+                </tr>
+              </thead>
+              <tbody>
+                <%if(typeof steam != "undefined"){%>
+                <%for(var i=0; i < steam.lengh ; i++){%>
+                <tr>
+                  <td><img width="50px" height="50px" src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/7f/7f503cdc5f6e41da6894612cbfe733e0082ae57d_full.jpg" alt=""></td>
+                  <td>76561198137084568</td>
+                  <td>Nalfu</td>
+                </tr>
+                <%}}%>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </body>
+      </html>

@@ -1,0 +1,17 @@
+{
+  "name": "steam2.0",
+  "version": "1.0.0",
+  "description": "Steam API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matheus Roberto de Jesus Batista",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.3",
+    "pg": "^7.4.3"
+  }
+}
