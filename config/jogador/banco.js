@@ -1,4 +1,4 @@
-const banco =
+const banco = <key>
 const {Pool} = require('pg');
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL || banco,
@@ -7,7 +7,7 @@ const pool = new Pool({
 
 var conexao = pool.connect();
 
-module.exports.insert = function(NM_JOGADOR, STEAM64, CAMINH_IMG){
+module.exports.insert =function(NM_JOGADOR, STEAM64, CAMINH_IMG){
   try {
     const insert = conexao.query('INSERT INTO TB_JOGADOR(NM_JOGADOR, STEAM64, CAMINH_IMG,NM_IMG) VALUES($1,$2,$3,$4)',[NM_JOGADOR,STEAM64,CAMINH_IMG,'iMAGEM DE: '+NM_JOGADOR]);
     conexao.release();
@@ -17,18 +17,29 @@ module.exports.insert = function(NM_JOGADOR, STEAM64, CAMINH_IMG){
 }
 
 
-module.exports.findAll(){
+module.exports.findAll = function(){
   try {
-    return const selectAll = conexao.query('SELECT * FROM TB_JOGADOR');
+    const selectAll = conexao.query('SELECT * FROM TB_JOGADOR');
     conexao.release();
   } catch (err) {
     console.log(err);
   }
 }
 
+
 module.exports.findById = function(id){
   try {
-    return const selectById = conexao.query('SELECT * FROM TB_JOGADOR WHERE ID_JOGADOR=$1',[id]);
+    var selectById = conexao.query('SELECT * FROM TB_JOGADOR WHERE ID_JOGADOR=$1',[id]);
+    conexao.release();
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+
+module.exports.findBySteam64 = function(Steam64){
+  try {
+    var selectBySteam64 = conexao.query('SELECT * FROM TB_JOGADOR WHERE STEAM64=$1',[Steam64]);
     conexao.release();
   } catch (err) {
     console.log(err);
