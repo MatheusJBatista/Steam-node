@@ -24,11 +24,11 @@
               </thead>
               <tbody>
                 <%if(typeof steam != "undefined"){%>
-                <%for(var i=0; i < steam.lengh ; i++){%>
+                <%for(var i=0; i < steam.rowCount ; i++){%>
                 <tr>
-                  <td><img width="50px" height="50px" src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/7f/7f503cdc5f6e41da6894612cbfe733e0082ae57d_full.jpg" alt=""></td>
-                  <td>76561198137084568</td>
-                  <td>Nalfu</td>
+                  <td><img width="50px" height="50px" src="<%=steam.rows[i].caminho_img%>" alt="<%=steam.rows[i].nm_img%>"></td>
+                  <td><%=steam.rows[i].steam64%></td>
+                  <td><%= steam.rows[i].nm_jogador%></td>
                 </tr>
                 <%}}%>
               </tbody>
