@@ -9,7 +9,7 @@ app.use(require('express-session')({ resave: false, saveUninitialized: false, se
 app.use(steam.middleware({
     realm: 'http://localhost:3000/',
     verify: 'http://localhost:3000/verify',
-    apiKey: '69FC736459FCC5094E6CE76DCD0A466D'}
+    apiKey: <key>}
 ));
 
 app.use(express.static('./app/public'));
