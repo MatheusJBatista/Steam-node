@@ -25,9 +25,10 @@ module.exports = function(app){
         });
       }
     }
-  });
+  });/*
   setTimeout(function(){
     res.redirect('/');
-  },1500);
+  },1500);*/
+  res.redirect('/');
 });
 }
