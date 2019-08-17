@@ -1,7 +1,8 @@
-var express = require('express');
-var app = express();
-var steam = require('steam-login');
-var consign = require('consign');
+const express = require('express')
+const app = express()
+const steam = require('steam-login')
+const consign = require('consign')
+const dotenvConfigLoad = require("dotenv/config")
 
 app.set('view engine', 'ejs');
 app.set('views', './app/views');
@@ -10,13 +11,14 @@ app.use(require('express-session')({ resave: false, saveUninitialized: false, se
 app.use(steam.middleware({
     realm: 'http://localhost:5000/',
     verify: 'http://localhost:5000/verify',
-    apiKey: '69FC736459FCC5094E6CE76DCD0A466D'}
+    apiKey: process.env.STEAM_KEY}
 ));
 app.use(express.static('./app/views/public'));
 
 consign()
   .include('app/routes')
   .then('config/dbConnection.js')
+  .then('config/createTables.js')
   .then('app/model')
   .into(app);
 
